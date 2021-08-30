@@ -2,7 +2,6 @@ package com.fishdetection.usermanagement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +17,7 @@ public class AdminController {
     public  Admin addUser(@RequestBody Admin admin){
         return adminrepo.save(admin);
     }
-    @GetMapping("listUser")
+    @GetMapping("list")
     public List<Admin> getAllUser(){
         Iterator<Admin> iterator = adminrepo.findAll().iterator();
         List<Admin> admin = new ArrayList<Admin>();
@@ -28,9 +27,34 @@ public class AdminController {
         return admin;
     }
 
-    @GetMapping("listUser/{id}")
+    @GetMapping("listbyid/{id}")
     public Optional<Admin> getUserById(@PathVariable Integer id){
         return adminrepo.findById(id);
+    }
+
+    @GetMapping("listbyname/{name}")
+    public List<Admin> getDataByName(@PathVariable String name){
+        return adminrepo.findByName(name);
+    }
+
+    @GetMapping("listbyaddress/{address}")
+    public List<Admin> getDataByAddress(@PathVariable String address){
+        return adminrepo.findByAddress(address);
+    }
+
+    @GetMapping("listbyemail/{email}")
+    public List<Admin> getDataByEmail(@PathVariable String email){
+        return adminrepo.findByEmail(email);
+    }
+
+    @GetMapping("listbyaddress/{username}")
+    public List<Admin> getDataByUsername(@PathVariable String username){
+        return adminrepo.findByUsername(username);
+    }
+
+    @GetMapping("listbyphoneNumber/{phoneNumber}")
+    public List<Admin> getDataByPhoneNumber(@PathVariable String phoneNumber){
+        return adminrepo.findByPhoneNumber(phoneNumber);
     }
 
     @PutMapping("updateUser/{id}")
