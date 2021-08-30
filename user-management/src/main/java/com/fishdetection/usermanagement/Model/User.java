@@ -1,4 +1,4 @@
-package com.fishdetection.usermanagement;
+package com.fishdetection.usermanagement.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;

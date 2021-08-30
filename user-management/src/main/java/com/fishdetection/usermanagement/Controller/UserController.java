@@ -1,5 +1,7 @@
-package com.fishdetection.usermanagement;
+package com.fishdetection.usermanagement.Controller;
 
+import com.fishdetection.usermanagement.Model.User;
+import com.fishdetection.usermanagement.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

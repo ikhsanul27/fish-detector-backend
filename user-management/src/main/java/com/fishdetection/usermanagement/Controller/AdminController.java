@@ -1,5 +1,7 @@
-package com.fishdetection.usermanagement;
+package com.fishdetection.usermanagement.Controller;
 
+import com.fishdetection.usermanagement.Model.Admin;
+import com.fishdetection.usermanagement.Repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -14,7 +16,7 @@ public class AdminController {
     AdminRepository adminrepo;
 
     @PostMapping("addUser")
-    public  Admin addUser(@RequestBody Admin admin){
+    public Admin addUser(@RequestBody Admin admin){
         return adminrepo.save(admin);
     }
     @GetMapping("list")

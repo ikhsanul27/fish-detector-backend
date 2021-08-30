@@ -1,5 +1,6 @@
-package com.fishdetection.usermanagement;
+package com.fishdetection.usermanagement.Repository;
 
+import com.fishdetection.usermanagement.Model.Admin;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 

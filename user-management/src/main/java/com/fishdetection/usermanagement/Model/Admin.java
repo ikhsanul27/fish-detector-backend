@@ -1,4 +1,4 @@
-package com.fishdetection.usermanagement;
+package com.fishdetection.usermanagement.Model;
 
 import org.apache.tomcat.jni.Local;
 import org.springframework.data.annotation.Id;
